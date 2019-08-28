@@ -43,6 +43,10 @@ public class Person3 {
 	 */
 	private String calc(String input) {
 	  //Person 3 put your implementation here
-	  return null;
+	  String name = "Angie";
+	  StringBuilder sb = new StringBuilder(name);
+	  String reverse = sb.reverse().toString();
+		
+	  return reverse;
 	}
 }
