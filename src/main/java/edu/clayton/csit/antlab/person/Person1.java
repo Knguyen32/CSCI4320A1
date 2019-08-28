@@ -31,7 +31,11 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  return null;
+	  String firstHalf = input.substring(0,2);
+	  String secondHalf = input.substring(2);
+	  String ename = secondHalf + firstHalf;
+
+	  return ename;
 	}
 	
 	/**
