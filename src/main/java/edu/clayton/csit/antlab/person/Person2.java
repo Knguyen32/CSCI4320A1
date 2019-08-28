@@ -1,5 +1,5 @@
 package edu.clayton.csit.antlab.person;
-
+import java.util.Random;
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -31,7 +31,16 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+    StringBuilder jumbler = new StringBuilder(input);
+    for(int i = jumbler.length() -1; i > 0; i--){
+      int n = new Random().nextInt(i + 1);
+
+      char tmp = jumbler.charAt(i);
+      jumbler.setCharAt(i, jumbler.charAt(n));
+      jumbler.setCharAt(n, tmp);
+
+    }
+	  return jumbler.toString();
 	}
 	/**
 	 * Return a string rep of this object
