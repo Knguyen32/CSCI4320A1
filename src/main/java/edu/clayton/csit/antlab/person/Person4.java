@@ -31,7 +31,31 @@ public class Person4 {
      */
     private String calc(String input) {
       //Person 4 put your implementation here
-      return null;
+      /**
+      * This method will take the name and find each
+      * letter's correpsonding index number.
+      * Once the indexing with the matching letter
+      * is found, it will add 1 to the index and return
+      * that value.
+      */
+      char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+      char[] name = input.toCharArray();
+      char[] newName = new char[name.length];
+      
+      for(int i = 0; i < name.length; i++)
+      {
+        for(int j = 0; j < alphabet.length; j++)
+        {
+          if(name[i] == alphabet[j])
+          {
+            newName[i] = alphabet[j + 1];
+          }
+        }
+      }
+      
+      String finalName = new String(newName);
+      
+      return finalName;
     }
     
     /**
